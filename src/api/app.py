@@ -5,12 +5,13 @@ Flask API Application - Flask API应用
 """
 
 import logging
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from typing import Dict, Any
+import os
 from ..core import DatabaseManager, KnowledgeGraphManager, get_db_manager
 from ..data import DataImporter
-from ..config import get_config
+from config import get_config
 
 
 def create_app(config_name: str = None) -> Flask:
@@ -30,6 +31,9 @@ def create_app(config_name: str = None) -> Flask:
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
 
+    # 获取项目根目录
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
     # 初始化组件
     db_manager = get_db_manager()
     kg_manager = KnowledgeGraphManager(db_manager)
@@ -45,6 +49,30 @@ def create_app(config_name: str = None) -> Flask:
         db_manager.create_constraints()
     except Exception as e:
         app.logger.warning(f"创建数据库约束失败: {e}")
+
+    @app.route('/')
+    def index():
+        """主页 - 返回前端界面"""
+        frontend_path = os.path.join(project_root, 'frontend', 'index.html')
+        if os.path.exists(frontend_path):
+            return send_from_directory(frontend_path, 'index.html')
+        else:
+            return jsonify({
+                'message': 'CS Knowledge Graph API',
+                'status': 'running',
+                'endpoints': {
+                    'health': '/health',
+                    'statistics': '/api/statistics',
+                    'nodes': '/api/nodes',
+                    'documentation': '访问 /docs 查看API文档'
+                }
+            })
+
+    @app.route('/frontend/<path:filename>')
+    def serve_frontend(filename):
+        """服务前端静态文件"""
+        frontend_dir = os.path.join(project_root, 'frontend')
+        return send_from_directory(frontend_dir, filename)
 
     @app.route('/health', methods=['GET'])
     def health_check():

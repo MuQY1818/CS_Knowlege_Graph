@@ -8,7 +8,7 @@ import logging
 from typing import Dict, List, Any, Optional, Union
 from neo4j import GraphDatabase
 from contextlib import contextmanager
-from ..config import Config
+from config import Config
 
 
 class DatabaseManager:

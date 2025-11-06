@@ -1,0 +1,563 @@
+{
+  "metadata": {
+    "language": "cpp",
+    "version": "C++20",
+    "description": "现代C++编程语言知识图谱数据",
+    "created_date": "2025-11-06",
+    "categories": [
+      "基础语法",
+      "数据类型",
+      "控制流",
+      "函数",
+      "面向对象编程",
+      "模板编程",
+      "STL标准库",
+      "现代C++特性",
+      "内存管理",
+      "异常处理",
+      "文件IO",
+      "多线程编程"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "cpp_language",
+      "name": "C++",
+      "node_type": "language",
+      "description": "C++是一种通用的、静态类型的、编译式的编程语言，支持多种编程范式",
+      "category": "编程语言",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "properties": {
+        "creator": "Bjarne Stroustrup",
+        "first_release": "1985",
+        "paradigms": ["过程式", "面向对象", "泛型编程", "函数式"],
+        "use_cases": ["系统编程", "游戏开发", "高性能计算", "嵌入式系统"]
+      }
+    },
+    {
+      "id": "cpp_basics",
+      "name": "C++基础语法",
+      "node_type": "concept",
+      "description": "C++语言的基础语法和程序结构",
+      "category": "基础语法",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "examples": ["#include <iostream>", "int main() { return 0; }", "std::cout << \"Hello World!\" << std::endl;"]
+    },
+    {
+      "id": "variables_types",
+      "name": "变量和数据类型",
+      "node_type": "concept",
+      "description": "C++中的变量声明和基本数据类型",
+      "category": "数据类型",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "examples": ["int age = 25;", "double price = 19.99;", "std::string name = \"John\";", "bool isValid = true;"]
+    },
+    {
+      "id": "basic_types",
+      "name": "基本数据类型",
+      "node_type": "concept",
+      "description": "C++内置的基本数据类型",
+      "category": "数据类型",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "properties": {
+        "types": ["int", "float", "double", "char", "bool", "void", "wchar_t"]
+      }
+    },
+    {
+      "id": "control_flow",
+      "name": "控制流程",
+      "node_type": "concept",
+      "description": "控制程序执行顺序的语句结构",
+      "category": "控制流",
+      "language": "cpp",
+      "difficulty_level": "beginner"
+    },
+    {
+      "id": "conditional_statements",
+      "name": "条件语句",
+      "node_type": "concept",
+      "description": "基于条件执行不同代码块的语句",
+      "category": "控制流",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "examples": ["if (condition) { /* code */ }", "if (x > 0) { /* positive */ } else { /* non-positive */ }", "switch (variable) { case 1: break; }"]
+    },
+    {
+      "id": "loops",
+      "name": "循环结构",
+      "node_type": "concept",
+      "description": "重复执行代码块的控制结构",
+      "category": "控制流",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "examples": ["for (int i = 0; i < 10; i++) {}", "while (condition) {}", "do { /* code */ } while (condition);"]
+    },
+    {
+      "id": "functions",
+      "name": "函数",
+      "node_type": "concept",
+      "description": "可重复使用的代码块，用于执行特定任务",
+      "category": "函数",
+      "language": "cpp",
+      "difficulty_level": "beginner",
+      "examples": ["int add(int a, int b) { return a + b; }", "void printMessage(const std::string& msg) {}", "auto lambda = [](int x) { return x * 2; };"]
+    },
+    {
+      "id": "function_parameters",
+      "name": "函数参数",
+      "node_type": "concept",
+      "description": "传递给函数的输入值",
+      "category": "函数",
+      "language": "cpp",
+      "difficulty_level": "beginner"
+    },
+    {
+      "id": "pointers",
+      "name": "指针",
+      "node_type": "concept",
+      "description": "存储内存地址的变量",
+      "category": "内存管理",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["int* ptr = &variable;", "int* arr = new int[10];", "delete[] arr;"]
+    },
+    {
+      "id": "references",
+      "name": "引用",
+      "node_type": "concept",
+      "description": "变量的别名",
+      "category": "内存管理",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["int& ref = variable;", "void func(int& param) {}", "const std::string& str = \"hello\";"]
+    },
+    {
+      "id": "memory_management",
+      "name": "内存管理",
+      "node_type": "concept",
+      "description": "程序运行时内存的分配和释放",
+      "category": "内存管理",
+      "language": "cpp",
+      "difficulty_level": "advanced"
+    },
+    {
+      "id": "oop",
+      "name": "面向对象编程",
+      "node_type": "paradigm",
+      "description": "基于对象和类的编程范式",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "intermediate"
+    },
+    {
+      "id": "classes",
+      "name": "类",
+      "node_type": "concept",
+      "description": "面向对象编程的基本构造，包含数据和操作数据的方法",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["class Person { private: std::string name; public: void setName(const std::string& n); };"]
+    },
+    {
+      "id": "objects",
+      "name": "对象",
+      "node_type": "concept",
+      "description": "类的实例",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "intermediate"
+    },
+    {
+      "id": "inheritance",
+      "name": "继承",
+      "node_type": "concept",
+      "description": "一个类从另一个类派生的机制",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["class Student : public Person { int studentId; };"]
+    },
+    {
+      "id": "polymorphism",
+      "name": "多态",
+      "node_type": "concept",
+      "description": "不同对象对相同消息产生不同响应的能力",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["virtual void draw() = 0;", "override void draw() { /* implementation */ }"]
+    },
+    {
+      "id": "encapsulation",
+      "name": "封装",
+      "node_type": "concept",
+      "description": "将数据和操作数据的方法绑定在一起",
+      "category": "面向对象编程",
+      "language": "cpp",
+      "difficulty_level": "intermediate"
+    },
+    {
+      "id": "templates",
+      "name": "模板",
+      "node_type": "concept",
+      "description": "泛型编程的基础，允许编写与类型无关的代码",
+      "category": "模板编程",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["template<typename T> T max(T a, T b) { return (a > b) ? a : b; }", "template<class T> class Container {};"]
+    },
+    {
+      "id": "stl",
+      "name": "标准模板库(STL)",
+      "node_type": "library",
+      "description": "C++标准库提供的容器、算法、迭代器等组件集合",
+      "category": "STL标准库",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "properties": {
+        "components": ["容器", "算法", "迭代器", "函数对象", "适配器"]
+      }
+    },
+    {
+      "id": "stl_containers",
+      "name": "STL容器",
+      "node_type": "concept",
+      "description": "STL提供的数据结构容器",
+      "category": "STL标准库",
+      "language": "cpp",
+      "difficulty_level": "intermediate"
+    },
+    {
+      "id": "vector",
+      "name": "vector容器",
+      "node_type": "concept",
+      "description": "动态数组，可以自动调整大小的序列容器",
+      "category": "STL标准库",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["std::vector<int> numbers = {1, 2, 3};", "numbers.push_back(4);", "for (int n : numbers) std::cout << n;"]
+    },
+    {
+      "id": "map",
+      "name": "map容器",
+      "node_type": "concept",
+      "description": "键值对关联容器，自动按键排序",
+      "category": "STL标准库",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["std::map<std::string, int> ages;", "ages[\"Alice\"] = 25;", "for (auto& pair : ages) std::cout << pair.first;"]
+    },
+    {
+      "id": "modern_cpp",
+      "name": "现代C++特性",
+      "node_type": "concept",
+      "description": "C++11及以后版本引入的新特性",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "advanced"
+    },
+    {
+      "id": "smart_pointers",
+      "name": "智能指针",
+      "node_type": "concept",
+      "description": "自动管理内存的指针类",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["std::unique_ptr<int> ptr = std::make_unique<int>(42);", "std::shared_ptr<int> shared = std::make_shared<int>(42);"]
+    },
+    {
+      "id": "lambda_expressions",
+      "name": "Lambda表达式",
+      "node_type": "concept",
+      "description": "匿名函数的简洁语法",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "advanced",
+      "examples": ["auto add = [](int a, int b) { return a + b; };", "numbers.forEach([](int n) { std::cout << n; });"]
+    },
+    {
+      "id": "auto_keyword",
+      "name": "auto关键字",
+      "node_type": "concept",
+      "description": "自动类型推导关键字",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["auto x = 42;", "auto it = vector.begin();", "auto func = []() { return 42; };"]
+    },
+    {
+      "id": "range_based_for",
+      "name": "基于范围的for循环",
+      "node_type": "concept",
+      "description": "简化的循环语法，用于遍历容器",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["for (int n : numbers) std::cout << n;", "for (const auto& item : container) { /* process item */ };"]
+    },
+    {
+      "id": "move_semantics",
+      "name": "移动语义",
+      "node_type": "concept",
+      "description": "高效的资源转移机制",
+      "category": "现代C++特性",
+      "language": "cpp",
+      "difficulty_level": "expert",
+      "examples": ["std::string str2 = std::move(str1);", "MyClass obj = MyClass();", "MyClass moved = std::move(obj);"]
+    },
+    {
+      "id": "exception_handling",
+      "name": "异常处理",
+      "node_type": "concept",
+      "description": "处理程序运行时错误的机制",
+      "category": "异常处理",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["try { /* risky code */ } catch (std::exception& e) { /* handle error */ }"]
+    },
+    {
+      "id": "file_io",
+      "name": "文件输入输出",
+      "node_type": "concept",
+      "description": "程序与文件系统交互的能力",
+      "category": "文件IO",
+      "language": "cpp",
+      "difficulty_level": "intermediate",
+      "examples": ["std::ofstream file(\"output.txt\");", "file << \"Hello\" << std::endl;", "std::ifstream input(\"data.txt\");"]
+    },
+    {
+      "id": "multithreading",
+      "name": "多线程编程",
+      "node_type": "concept",
+      "description": "同时执行多个线程的编程技术",
+      "category": "多线程编程",
+      "language": "cpp",
+      "difficulty_level": "expert",
+      "examples": ["std::thread t(function_name);", "t.join();", "std::mutex mtx;", "std::lock_guard<std::mutex> lock(mtx);"]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "cpp_belongsto_lang",
+      "source_id": "cpp_basics",
+      "target_id": "cpp_language",
+      "relationship_type": "belongs_to",
+      "description": "C++基础语法属于C++语言",
+      "strength": "strong"
+    },
+    {
+      "id": "variables_belongsto_basics",
+      "source_id": "variables_types",
+      "target_id": "cpp_basics",
+      "relationship_type": "belongs_to",
+      "description": "变量和数据类型属于基础语法",
+      "strength": "strong"
+    },
+    {
+      "id": "basictypes_belongsto_variables",
+      "source_id": "basic_types",
+      "target_id": "variables_types",
+      "relationship_type": "belongs_to",
+      "description": "基本数据类型属于变量和数据类型",
+      "strength": "strong"
+    },
+    {
+      "id": "controlflow_belongsto_basics",
+      "source_id": "control_flow",
+      "target_id": "cpp_basics",
+      "relationship_type": "belongs_to",
+      "description": "控制流程属于基础语法",
+      "strength": "strong"
+    },
+    {
+      "id": "conditional_belongsto_controlflow",
+      "source_id": "conditional_statements",
+      "target_id": "control_flow",
+      "relationship_type": "belongs_to",
+      "description": "条件语句属于控制流程",
+      "strength": "strong"
+    },
+    {
+      "id": "loops_belongsto_controlflow",
+      "source_id": "loops",
+      "target_id": "control_flow",
+      "relationship_type": "belongs_to",
+      "description": "循环结构属于控制流程",
+      "strength": "strong"
+    },
+    {
+      "id": "functions_belongsto_basics",
+      "source_id": "functions",
+      "target_id": "cpp_basics",
+      "relationship_type": "belongs_to",
+      "description": "函数属于基础语法",
+      "strength": "strong"
+    },
+    {
+      "id": "funcparams_belongsto_functions",
+      "source_id": "function_parameters",
+      "target_id": "functions",
+      "relationship_type": "belongs_to",
+      "description": "函数参数属于函数",
+      "strength": "strong"
+    },
+    {
+      "id": "pointers_related_memory",
+      "source_id": "pointers",
+      "target_id": "memory_management",
+      "relationship_type": "related_to",
+      "description": "指针与内存管理密切相关",
+      "strength": "strong"
+    },
+    {
+      "id": "references_related_memory",
+      "source_id": "references",
+      "target_id": "memory_management",
+      "relationship_type": "related_to",
+      "description": "引用与内存管理相关",
+      "strength": "moderate"
+    },
+    {
+      "id": "oop_uses_pointers",
+      "source_id": "oop",
+      "target_id": "pointers",
+      "relationship_type": "uses",
+      "description": "面向对象编程使用指针",
+      "strength": "moderate"
+    },
+    {
+      "id": "classes_implement_oop",
+      "source_id": "classes",
+      "target_id": "oop",
+      "relationship_type": "implements",
+      "description": "类实现面向对象编程",
+      "strength": "strong"
+    },
+    {
+      "id": "objects_created_from_classes",
+      "source_id": "objects",
+      "target_id": "classes",
+      "relationship_type": "created_from",
+      "description": "对象从类创建",
+      "strength": "strong"
+    },
+    {
+      "id": "inheritance_extends_classes",
+      "source_id": "inheritance",
+      "target_id": "classes",
+      "relationship_type": "extends",
+      "description": "继承扩展类",
+      "strength": "strong"
+    },
+    {
+      "id": "polymorphism_requires_inheritance",
+      "source_id": "polymorphism",
+      "target_id": "inheritance",
+      "relationship_type": "requires",
+      "description": "多态需要继承",
+      "strength": "strong"
+    },
+    {
+      "id": "encapsulation_partof_oop",
+      "source_id": "encapsulation",
+      "target_id": "oop",
+      "relationship_type": "part_of",
+      "description": "封装是面向对象编程的一部分",
+      "strength": "strong"
+    },
+    {
+      "id": "templates_enables_stl",
+      "source_id": "templates",
+      "target_id": "stl",
+      "relationship_type": "enables",
+      "description": "模板使STL成为可能",
+      "strength": "strong"
+    },
+    {
+      "id": "stlcontainers_belongsto_stl",
+      "source_id": "stl_containers",
+      "target_id": "stl",
+      "relationship_type": "belongs_to",
+      "description": "STL容器属于标准模板库",
+      "strength": "strong"
+    },
+    {
+      "id": "vector_belongsto_containers",
+      "source_id": "vector",
+      "target_id": "stl_containers",
+      "relationship_type": "belongs_to",
+      "description": "vector属于STL容器",
+      "strength": "strong"
+    },
+    {
+      "id": "map_belongsto_containers",
+      "source_id": "map",
+      "target_id": "stl_containers",
+      "relationship_type": "belongs_to",
+      "description": "map属于STL容器",
+      "strength": "strong"
+    },
+    {
+      "id": "moderncpp_improves_cpp",
+      "source_id": "modern_cpp",
+      "target_id": "cpp_language",
+      "relationship_type": "improves",
+      "description": "现代C++特性改进了C++语言",
+      "strength": "strong"
+    },
+    {
+      "id": "smartpointers_improve_memory",
+      "source_id": "smart_pointers",
+      "target_id": "memory_management",
+      "relationship_type": "improves",
+      "description": "智能指针改进了内存管理",
+      "strength": "strong"
+    },
+    {
+      "id": "lambda_improves_functions",
+      "source_id": "lambda_expressions",
+      "target_id": "functions",
+      "relationship_type": "improves",
+      "description": "Lambda表达式改进了函数定义",
+      "strength": "moderate"
+    },
+    {
+      "id": "auto_simplifies_typing",
+      "source_id": "auto_keyword",
+      "target_id": "variables_types",
+      "relationship_type": "simplifies",
+      "description": "auto关键字简化了类型声明",
+      "strength": "moderate"
+    },
+    {
+      "id": "rangefor_improves_loops",
+      "source_id": "range_based_for",
+      "target_id": "loops",
+      "relationship_type": "improves",
+      "description": "基于范围的for循环改进了循环语法",
+      "strength": "moderate"
+    },
+    {
+      "id": "move_improves_performance",
+      "source_id": "move_semantics",
+      "target_id": "memory_management",
+      "relationship_type": "improves",
+      "description": "移动语义改善了性能",
+      "strength": "strong"
+    },
+    {
+      "id": "exception_handling_error_management",
+      "source_id": "exception_handling",
+      "target_id": "memory_management",
+      "relationship_type": "manages",
+      "description": "异常处理管理错误情况",
+      "strength": "moderate"
+    }
+  ]
+}

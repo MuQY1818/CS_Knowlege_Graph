@@ -103,7 +103,7 @@ def main():
     app = create_app()
 
     # 获取配置
-    from src.config import get_config
+    from config import get_config
     config = get_config()
 
     logger.info(f"API服务器启动在 http://{config.API_HOST}:{config.API_PORT}")
