@@ -1,0 +1,45 @@
+# 核心依赖
+flask==2.3.3
+flask-cors==4.0.0
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# 图数据库相关
+neo4j==5.15.0
+py2neo==2021.2.4
+
+# 数据处理
+pandas==2.0.3
+numpy==1.24.4
+openpyxl==3.1.2
+
+# 图论和网络分析
+networkx==3.1
+matplotlib==3.7.2
+plotly==5.17.0
+
+# 自然语言处理
+spacy==3.6.1
+nltk==3.8.1
+
+# Web开发和API
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# 配置和环境管理
+python-dotenv==1.0.0
+pydantic==2.5.0
+
+# 测试框架
+pytest==7.4.2
+pytest-cov==4.1.0
+
+# 开发工具
+black==23.9.1
+flake8==6.1.0
+isort==5.12.0
+
+# 可视化前端相关（可选）
+jinja2==3.1.2
+werkzeug==2.3.7
+plotly==5.11.0
